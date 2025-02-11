@@ -12,6 +12,8 @@ body {
     background-color: var(--primary-bg);
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 /* 🎨 Navbar */
@@ -19,11 +21,17 @@ body {
     background-color: var(--primary-bg);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand {
+    font-weight: bold;
     color: var(--accent-color) !important;
 }
 
-.nav-link:hover {
+.nav-link {
+    color: var(--accent-color) !important;
+    font-weight: 500;
+}
+
+.nav-link:hover, .nav-link.active {
     color: var(--cta-color) !important;
 }
 
@@ -36,17 +44,21 @@ body {
 
 .hero h1 {
     color: var(--accent-color);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
 
-.hero .btn-primary {
-    background-color: var(--cta-color);
-    border-color: var(--cta-color);
+.hero .lead {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--text-color);
 }
 
-.hero .btn-primary:hover {
-    background-color: var(--accent-color);
-    border-color: var(--accent-color);
-    color: var(--primary-bg);
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid var(--cta-color);
 }
 
 /* 🎨 Buttons */
@@ -54,17 +66,78 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     font-weight: bold;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn-primary {
     background-color: var(--cta-color);
     border-color: var(--cta-color);
+    color: var(--text-color);
 }
 
 .btn-primary:hover {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     color: var(--primary-bg);
+}
+
+.btn-outline-light {
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline-light:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* 🎨 About Section */
+.about-section {
+    background-color: var(--secondary-bg);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+}
+
+.about-section h2 {
+    color: var(--cta-color);
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 🎨 Skills Section */
+.skills-section {
+    background-color: var(--primary-bg);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.skills-section h2 {
+    color: var(--cta-color);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
 }
 
 /* 🎨 Certifications Section */
@@ -74,6 +147,7 @@ body {
     padding: 20px;
     text-align: center;
     border-radius: 8px;
+    margin: 20px auto;
 }
 
 .cert-card img {
@@ -95,8 +169,11 @@ body {
 
 .footer a {
     color: var(--cta-color);
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .footer a:hover {
     color: var(--accent-color);
+    text-decoration: underline;
 }
