@@ -17,3 +17,19 @@
     padding: 10px;
     margin: 10px 0;
 }
+.hero {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    padding: 80px 0;
+}
+
+.cert-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+}
+
