@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Clarence Terrenal</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -28,16 +28,18 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero">
-        <div class="container text-center">
-            <img src="assets/images/profile.jpg" class="profile-img" alt="Clarence Terrenal" style="width: 150px; height: auto; border-radius: 50%;">
+    <header class="hero text-center text-white">
+        <div class="container">
+            <img src="assets/images/profile.jpg" class="rounded-circle" width="150" alt="Clarence Terrenal">
             <h1>Clarence Terrenal</h1>
-            <p class="lead">Technical Support Engineer | Avid iNEWS Specialist | Linux & Cloud Enthusiast</p>
+            <p>Technical Support Engineer | Linux & Cloud Enthusiast | Avid iNEWS Specialist</p>
+            <a href="projects.html" class="btn btn-primary">View My Work</a>
+            <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
         </div>
     </header>
 
     <!-- About Section -->
-    <section class="about-section container">
+    <section class="container py-5">
         <h2>About Me</h2>
         <p>
             I'm an experienced <strong>Technical Support Engineer</strong> specializing in <strong>Avid iNEWS and Command</strong>, with a passion for <strong>Linux systems and cloud technologies</strong>.
@@ -50,9 +52,9 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="skills-section container">
+    <section class="container py-5">
         <h2>Technical Skills</h2>
-        <ul class="skills-list">
+        <ul class="list-unstyled">
             <li>🔹 Avid iNEWS & Command Troubleshooting</li>
             <li>🔹 Linux System Administration</li>
             <li>🔹 Cloud Technologies (AWS, Azure)</li>
@@ -62,15 +64,12 @@
         </ul>
     </section>
 
-    <!-- CTA Buttons -->
-    <div class="text-center">
-        <a href="projects.html" class="btn btn-primary">View My Work</a>
-        <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
-    </div>
-
     <!-- Footer -->
-    <footer class="footer">
-        <p>© 2025 Clarence Terrenal | <a href="https://github.com/cgterrenal" target="_blank">GitHub</a></p>
+    <footer class="footer bg-dark text-center text-white py-3">
+        <p>© 2025 Clarence Terrenal | <a href="https://github.com/cgterrenal" target="_blank" class="text-white">GitHub</a></p>
     </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
