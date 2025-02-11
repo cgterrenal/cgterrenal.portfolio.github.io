@@ -1,36 +1,102 @@
-.hero {
-    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* 🎨 Global Colors */
+:root {
+    --primary-bg: #0f1108;   /* Dark Charcoal */
+    --secondary-bg: #7f9183; /* Muted Green */
+    --accent-color: #bbbdf6; /* Lavender Blue */
+    --cta-color: #cf5c36;    /* Burnt Orange */
+    --text-color: #ffffff;   /* White for readability */
 }
 
-.certification img, .project img {
-    max-width: 100px;
-    margin-right: 10px;
+/* 🎨 General Styles */
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
 }
 
-.project, .certification {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px 0;
+/* 🎨 Navbar */
+.navbar {
+    background-color: var(--primary-bg);
 }
+
+.navbar-brand, .nav-link {
+    color: var(--accent-color) !important;
+}
+
+.nav-link:hover {
+    color: var(--cta-color) !important;
+}
+
+/* 🎨 Hero Section */
 .hero {
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background: linear-gradient(to right, var(--primary-bg), var(--secondary-bg));
+    text-align: center;
     padding: 80px 0;
 }
 
+.hero h1 {
+    color: var(--accent-color);
+}
+
+.hero .btn-primary {
+    background-color: var(--cta-color);
+    border-color: var(--cta-color);
+}
+
+.hero .btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* 🎨 Buttons */
+.btn {
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--cta-color);
+    border-color: var(--cta-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* 🎨 Certifications Section */
 .cert-card {
-    border: 1px solid #ddd;
-    padding: 15px;
+    background-color: var(--secondary-bg);
+    border: 2px solid var(--accent-color);
+    padding: 20px;
     text-align: center;
-    max-width: 100px;
+    border-radius: 8px;
 }
 
-.profile-img {
-    width: 150px;
-    border-radius: 50%;
+.cert-card img {
+    width: 100px;
+    margin-bottom: 10px;
 }
 
+.cert-card h3 {
+    color: var(--cta-color);
+}
+
+/* 🎨 Footer */
+.footer {
+    background-color: var(--primary-bg);
+    color: var(--accent-color);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: var(--cta-color);
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
