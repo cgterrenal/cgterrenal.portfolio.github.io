@@ -105,23 +105,50 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* 🎨 Skills */
+/* 🎨 About Section */
+.about-section {
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-section img.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid var(--cta-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎨 Skills Section */
+.skills-section {
+    background-color: var(--secondary-bg);
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
 .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
     list-style: none;
+    padding: 0;
 }
 
 .skills-list li {
     background-color: var(--accent-color);
     color: var(--primary-bg);
-    padding: 8px 15px;
-    margin: 5px;
-    border-radius: 3px;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-list li::before {
+    content: "✔";
+    color: var(--primary-bg);
     font-weight: bold;
 }
+
 
 /* 🎨 Footer */
 .footer {
