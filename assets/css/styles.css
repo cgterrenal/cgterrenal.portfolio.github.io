@@ -105,35 +105,35 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* 🎨 About Section */
+/* 🎨 About Section - Dark Theme */
 .about-section {
-    text-align: left;
-    max-width: 900px;
-    margin: auto;
+    background-color: #0f1108; /* Dark background */
+    color: #bbbdf6; /* Light text */
 }
 
 .about-section img.profile-img {
     width: 150px;
     border-radius: 50%;
-    border: 3px solid var(--cta-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid #cf5c36; /* Accent color */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
 
-/* 🎨 Skills Section */
+/* 🎨 Skills Section - Alternating Darker Shade */
 .skills-section {
-    background-color: var(--secondary-bg);
+    background-color: #1a1d16; /* Slightly lighter dark */
     padding: 50px 20px;
     border-radius: 10px;
 }
 
+/* 🛠 Skills List */
 .skills-list {
     list-style: none;
     padding: 0;
 }
 
 .skills-list li {
-    background-color: var(--accent-color);
-    color: var(--primary-bg);
+    background-color: #7f9183; /* Soft contrast */
+    color: #0f1108;
     padding: 12px;
     margin: 10px 0;
     border-radius: 5px;
@@ -143,9 +143,10 @@ h2 {
     gap: 8px;
 }
 
+/* ✔ Icon before skills */
 .skills-list li::before {
     content: "✔";
-    color: var(--primary-bg);
+    color: #cf5c36;
     font-weight: bold;
 }
 
