@@ -161,12 +161,27 @@ h2 {
     color: var(--accent-color);
     text-decoration: underline;
 }
-.card-img-top {
-    width: 100%;  /* Ensures images scale to fit the card */
-    height: 200px; /* Fixed height for uniformity */
-    object-fit: cover; /* Ensures images maintain aspect ratio without distortion */
-    border-radius: 5px; /* Optional: for rounded corners */
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensures cards have equal height */
 }
+
+.card-img-top {
+    width: 100%;  /* Ensures images fill the card width */
+    height: 200px; /* Consistent image height */
+    object-fit: cover; /* Keeps aspect ratio and fills container */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns text to the lower-middle portion */
+    flex-grow: 1; /* Allows text to take up remaining space */
+    text-align: center; /* Centers text */
+    padding: 15px; /* Adds space around the text */
+}
+
 
 html {
     scroll-behavior: smooth;
