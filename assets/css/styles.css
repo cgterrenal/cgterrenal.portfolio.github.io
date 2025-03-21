@@ -161,6 +161,12 @@ h2 {
     color: var(--accent-color);
     text-decoration: underline;
 }
+.card-img-top {
+    width: 100%;  /* Ensures images scale to fit the card */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures images maintain aspect ratio without distortion */
+    border-radius: 5px; /* Optional: for rounded corners */
+}
 
 html {
     scroll-behavior: smooth;
