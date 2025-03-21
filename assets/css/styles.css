@@ -1,10 +1,13 @@
 /* 🎨 Global Colors */
 :root {
-    --primary-bg: #121212;   /* Dark Background */
-    --secondary-bg: #1e1e1e; /* Slightly lighter for contrast */
-    --accent-color: #bbbdf6; /* Lavender Blue */
-    --cta-color: #cf5c36;    /* Burnt Orange */
-    --text-color: #e0e0e0;   /* Soft White */
+    --primary-bg: #121212;     /* Dark Background */
+    --secondary-bg: #1e1e1e;   /* Slightly lighter for contrast */
+    --accent-color: #bbbdf6;   /* Lavender Blue */
+    --cta-color: #cf5c36;      /* Burnt Orange */
+    --text-color: #e0e0e0;     /* Soft White */
+    --card-bg: #2a2a2a;        /* Card background */
+    --border-radius: 8px;      /* Unified border radius */
+    --transition: all 0.3s ease-in-out; /* Unified transition */
 }
 
 /* 🎨 General Styles */
@@ -14,192 +17,474 @@ body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 76px; /* Account for sticky nav */
+}
+
+/* 🎨 Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+.lead {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+strong {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.section-title {
+    color: var(--accent-color);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--cta-color);
+}
+
+/* Make section titles left-aligned in non-centered sections */
+div:not(.text-center) > .section-title::after {
+    left: 0;
+    transform: none;
 }
 
 /* 🎨 Navbar */
 .navbar {
-    background-color: var(--primary-bg);
     padding: 15px 0;
+    transition: var(--transition);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
     font-weight: bold;
-    color: var(--accent-color) !important;
+}
+
+.brand-name {
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .nav-link {
     color: var(--text-color) !important;
     font-weight: 500;
-    transition: color 0.3s ease-in-out;
+    position: relative;
+    padding: 8px 15px !important;
+    margin: 0 5px;
+    transition: var(--transition);
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--cta-color);
+    transition: var(--transition);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after, 
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover, 
+.nav-link.active {
     color: var(--cta-color) !important;
 }
 
 /* 🎨 Hero Section */
 .hero {
-    background-color: var(--secondary-bg);
-    text-align: center;
-    padding: 60px 20px;
+    padding: 100px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(207, 92, 54, 0.1), transparent 70%);
 }
 
 .hero h1 {
     color: var(--accent-color);
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
+    margin-bottom: 25px;
     color: var(--text-color);
+    opacity: 0.9;
 }
 
 .profile-img {
-    width: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-bottom: 15px;
-    border: 2px solid var(--cta-color);
+    object-fit: cover;
+    border: 3px solid var(--cta-color);
+    padding: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    border-color: var(--accent-color);
 }
 
 /* 🎨 Buttons */
 .btn {
-    border-radius: 4px;
-    padding: 10px 18px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
+    border-radius: var(--border-radius);
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: var(--transition);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
 }
 
-.btn-primary {
+.btn-cta {
     background-color: var(--cta-color);
     border: none;
     color: var(--text-color);
-    margin-top: auto; /* Ensures the button is always at the bottom */
-    align-self: center; /* Centers button */
 }
 
-.btn-primary:hover {
+.btn-cta:hover {
     background-color: var(--accent-color);
     color: var(--primary-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-outline-light {
-    border: 1px solid var(--accent-color);
+    border: 2px solid var(--accent-color);
     color: var(--accent-color);
+    background-color: transparent;
 }
 
 .btn-outline-light:hover {
     background-color: var(--accent-color);
     color: var(--primary-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* 🎨 Section Styling */
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
+/* 🎨 About Section */
+#about-section {
+    overflow: hidden;
+    position: relative;
 }
 
-h2 {
-    color: var(--cta-color);
-    margin-bottom: 15px;
+.profile-container {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: var(--transition);
 }
 
-/* 🎨 About Me Section */
-.about {
-    background-color: var(--secondary-bg);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.profile-container:hover::before {
+    border-color: var(--cta-color);
+}
+
+.profile-container:hover {
+    transform: translateY(-5px);
+}
+
+.about-content p {
+    margin-bottom: 1rem;
 }
 
 /* 🎨 Skills Section */
-.skills {
-    background-color: var(--primary-bg);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.skill-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 25px 20px;
+    height: 100%;
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-}
-
-.skills-list li {
-    background-color: var(--accent-color);
-    color: var(--primary-bg);
-    padding: 10px 18px;
-    margin: 8px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.2s ease-in-out;
-}
-
-.skills-list li:hover {
-    transform: scale(1.1);
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
     background-color: var(--cta-color);
+    transition: var(--transition);
+}
+
+.skill-card:hover::before {
+    height: 100%;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+    color: var(--cta-color);
+    transform: scale(1.1);
+}
+
+.skill-card h4 {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    transition: var(--transition);
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 🎨 Stats Section */
+.stat-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px 20px;
+    transition: var(--transition);
+    height: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--cta-color);
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+/* 🎨 Interests Section */
+.interests-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.interest-item {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: var(--transition);
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: var(--cta-color);
+}
+
+.interest-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.interest-item:hover i {
     color: var(--text-color);
+}
+
+.interest-item span {
+    font-weight: 500;
 }
 
 /* 🎨 Footer */
 .footer {
-    background-color: var(--primary-bg);
+    background-color: var(--secondary-bg);
     color: var(--text-color);
-    padding: 20px;
-    text-align: center;
-    font-size: 0.9rem;
+    padding: 30px 0;
 }
 
-.footer a {
+.social-icons .list-inline-item {
+    margin-right: 15px;
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
     color: var(--cta-color);
-    text-decoration: none;
-    font-weight: 500;
+    transform: translateY(-3px);
+    display: inline-block;
 }
 
-.footer a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
+/* 🎨 Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .hero {
+        padding: 60px 0 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
+
+@media (max-width: 575.98px) {
+    .btn {
+        padding: 10px 20px;
+    }
+    
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card styles for certifications page */
 .card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    border: none;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Ensures content is centered */
+    align-items: center;
     justify-content: space-between;
-    height: 100%; /* Ensures all cards are the same height */
-    border-radius: 8px; /* Optional: smooth rounded corners */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
+    height: 100%;
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
-    width: 100%;  /* Ensures all images are the same width */
-    height: 180px; /* Adjust as needed for uniform height */
-    object-fit: contain; /* Ensures the full certificate is visible */
-    padding: 10px; /* Adds spacing around images */
-    background-color: white; /* Keeps a clean background */
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
 .card-body {
-    flex-grow: 1; /* Expands the text section to align it properly */
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centers text in the lower-middle */
-    text-align: center; /* Ensures all text is centered */
-    padding: 15px; /* Adds spacing around text */
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
 }
 
 .card-title {
-    font-size: 1.1rem; /* Ensures title size is consistent */
-    font-weight: bold;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
 .card-text {
-    font-size: 0.9rem; /* Keeps text readable and proportional */
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
 }
 
-html {
-    scroll-behavior: smooth;
+/* Animation utilities */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
