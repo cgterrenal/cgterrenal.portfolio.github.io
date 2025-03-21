@@ -75,6 +75,8 @@ body {
     background-color: var(--cta-color);
     border: none;
     color: var(--text-color);
+    margin-top: auto; /* Ensures the button is always at the bottom */
+    align-self: center; /* Centers button */
 }
 
 .btn-primary:hover {
@@ -164,24 +166,38 @@ h2 {
 .card {
     display: flex;
     flex-direction: column;
-    height: 100%; /* Ensures cards have equal height */
+    align-items: center; /* Ensures content is centered */
+    justify-content: space-between;
+    height: 100%; /* Ensures all cards are the same height */
+    border-radius: 8px; /* Optional: smooth rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visuals */
 }
 
 .card-img-top {
-    width: 100%;  /* Ensures images fill the card width */
-    height: 200px; /* Consistent image height */
-    object-fit: cover; /* Keeps aspect ratio and fills container */
+    width: 100%;  /* Ensures all images are the same width */
+    height: 180px; /* Adjust as needed for uniform height */
+    object-fit: contain; /* Ensures the full certificate is visible */
+    padding: 10px; /* Adds spacing around images */
+    background-color: white; /* Keeps a clean background */
 }
 
 .card-body {
+    flex-grow: 1; /* Expands the text section to align it properly */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Aligns text to the lower-middle portion */
-    flex-grow: 1; /* Allows text to take up remaining space */
-    text-align: center; /* Centers text */
-    padding: 15px; /* Adds space around the text */
+    justify-content: center; /* Centers text in the lower-middle */
+    text-align: center; /* Ensures all text is centered */
+    padding: 15px; /* Adds spacing around text */
 }
 
+.card-title {
+    font-size: 1.1rem; /* Ensures title size is consistent */
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 0.9rem; /* Keeps text readable and proportional */
+}
 
 html {
     scroll-behavior: smooth;
