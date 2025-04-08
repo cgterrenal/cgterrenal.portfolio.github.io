@@ -2,13 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clarence Terrenal - Technical Support Engineer | Experience in Avid iNEWS, Linux, and Broadcast Systems">
     <title>Experience - Clarence Terrenal</title>
-    <link rel="stylesheet" href="assets/css/styles.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+
+    <style>
+        [data-aos] {
+            opacity: 0;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(20px);
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
-<body class="bg-dark text-white">
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--secondary-bg);">
         <div class="container">
@@ -28,45 +53,80 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="hero text-center text-white position-relative">
+        <div class="hero-overlay position-absolute w-100 h-100" style="z-index: 1;"></div>
+        <div class="container py-5 position-relative" style="z-index: 2;" data-aos>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <img src="assets/images/profile.jpg" class="rounded-circle profile-img" alt="Clarence Terrenal">
+                    <h1 class="mt-4 display-4 fw-bold">Experience</h1>
+                    <p class="lead mb-4">Driven by results, rooted in technical excellence</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="projects.html" class="btn btn-cta">View My Work</a>
+                        <a href="contact.html" class="btn btn-outline-light">Get in Touch</a>
+                    </div>
+                    <div class="mt-5 social-icons">
+                        <a href="https://www.linkedin.com/in/cgterrenal/" target="_blank" class="me-3 text-white" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Experience Section -->
-    <main class="container section">
-        <h1 class="section-title text-center">Professional Experience</h1>
-
-        <div class="experience">
-            <article class="experience-item mb-5">
-                <h3 class="experience-role">Technical Support Engineer I</h3>
-                <h4 class="experience-company text-muted">Avid Technology</h4>
-                <p class="experience-dates"><em>March 2024 – Present | Remote, Philippines</em></p>
-                <ul class="experience-list">
-                    <li>Resolved complex technical issues in <strong>Avid Command and iNEWS</strong> systems across Windows and Linux environments, closing over <strong>342 support cases</strong> since June 2024.</li>
-                    <li>Utilized strong Linux and networking knowledge to optimize server-to-playlist communication and enhance broadcast workflow efficiency.</li>
-                    <li>Handled escalations, performed root cause analysis (RCA), and collaborated with Engineering and Level 2 teams using JIRA.</li>
-                    <li>Ensured operational continuity by documenting detailed shift logs and adhering to SLAs in high-stakes broadcast client environments.</li>
-                </ul>
-            </article>
-
-            <article class="experience-item mb-5">
-                <h3 class="experience-role">Artificial Intelligence Team Leader (Internship)</h3>
-                <h4 class="experience-company text-muted">NeoDocto Inc.</h4>
-                <p class="experience-dates"><em>August 2022 – October 2022 | Remote</em></p>
-                <ul class="experience-list">
-                    <li>Led a team of interns in developing and customizing a chatbot integrated into NeoDocto’s official website.</li>
-                    <li>Collaborated on delivering content and technical outputs, showcasing teamwork in a cross-functional setting.</li>
-                </ul>
-            </article>
+    <section class="container-fluid py-5" style="background-color: var(--secondary-bg); color: var(--text-color);" data-aos>
+        <div class="container">
+            <h2 class="section-title mb-5 text-center">Professional Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="mb-5">
+                        <h3 class="text-accent">Technical Support Engineer I</h3>
+                        <p class="mb-1"><strong>Avid Technology</strong> — <em>March 2024 – Present | Remote</em></p>
+                        <ul>
+                            <li>Resolved complex technical issues in <strong>Avid Command and iNEWS</strong> systems across Windows and Linux environments, closing over <strong>342 support cases</strong> since June 2024.</li>
+                            <li>Utilized strong Linux and networking knowledge to optimize server-to-playlist communication and enhance broadcast workflow efficiency.</li>
+                            <li>Handled escalations, performed root cause analysis (RCA), and collaborated with Engineering and Level 2 teams using JIRA.</li>
+                            <li>Ensured operational continuity by documenting detailed shift logs and adhering to SLAs in high-stakes broadcast client environments.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-accent">Artificial Intelligence Team Leader (Internship)</h3>
+                        <p class="mb-1"><strong>NeoDocto Inc.</strong> — <em>August 2022 – October 2022 | Remote</em></p>
+                        <ul>
+                            <li>Led a team of interns in developing and customizing a chatbot integrated into NeoDocto’s official website.</li>
+                            <li>Collaborated on delivering content and technical outputs, showcasing teamwork in a cross-functional setting.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="certifications.html" class="btn btn-outline-light">View My Certifications</a>
+            </div>
         </div>
-
-        <div class="text-center mt-4">
-            <a href="certifications.html" class="btn btn-cta">View My Certifications</a>
-        </div>
-    </main>
+    </section>
 
     <!-- Footer -->
     <footer class="text-center py-3 bg-dark text-white">
         <p class="mb-0">© 2025 Clarence Terrenal. All rights reserved.</p>
     </footer>
 
-    <!-- Bootstrap JS -->
+    <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('aos-animate');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-aos]').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
