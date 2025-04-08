@@ -6,13 +6,34 @@
     <title>Experience - Clarence Terrenal</title>
     <link rel="stylesheet" href="assets/css/styles.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Professional Experience</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><span class="brand-name">Clarence Terrenal</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-        <div class="mb-4">
-            <h3>Avid Technology</h3>
+    <!-- Experience Section -->
+    <main class="container my-5">
+        <h1 class="text-center display-5 fw-bold mb-5">Professional Experience</h1>
+
+        <section class="mb-5">
+            <h3 class="fw-semibold">Avid Technology</h3>
             <h5 class="text-muted">Technical Support Engineer I</h5>
             <p><em>March 2024 – Present | Remote, Philippines</em></p>
             <ul>
@@ -21,23 +42,29 @@
                 <li>Handled escalations, performed root cause analysis (RCA), and collaborated with Engineering and Level 2 teams using JIRA.</li>
                 <li>Ensured operational continuity by documenting detailed shift logs and adhering to SLAs in high-stakes broadcast client environments.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="mb-4">
-            <h3>NeoDocto Inc.</h3>
+        <section class="mb-5">
+            <h3 class="fw-semibold">NeoDocto Inc.</h3>
             <h5 class="text-muted">Artificial Intelligence Team Leader (Internship)</h5>
             <p><em>August 2022 – October 2022 | Remote</em></p>
             <ul>
                 <li>Led a team of interns in developing and customizing a chatbot integrated into NeoDocto’s official website.</li>
                 <li>Collaborated on delivering content and technical outputs, showcasing teamwork in a cross-functional setting.</li>
             </ul>
-        </div>
+        </section>
 
-        <div class="text-center mt-5">
+        <div class="text-center mt-4">
             <a href="certifications.html" class="btn btn-cta">View My Certifications</a>
         </div>
-    </div>
+    </main>
 
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white">
+        <p class="mb-0">© 2025 Clarence Terrenal. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
