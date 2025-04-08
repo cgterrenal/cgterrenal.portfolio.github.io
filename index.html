@@ -1,140 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Clarence Terrenal - Technical Support Engineer specializing in Linux, Cloud technologies, and Avid iNEWS systems. Explore my projects, experience, and certifications.">
-  <title>Clarence Terrenal - Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clarence Terrenal - Technical Support Engineer specializing in Linux, Cloud technologies, and Avid iNEWS systems. Explore my projects, experience, and certifications.">
+    <title>Clarence Terrenal - Portfolio</title>
 
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-
-  <!-- Favicon -->
-  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
-
-  <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Clarence Terrenal",
-    "url": "https://www.clarenceterrenal.com",
-    "jobTitle": "Technical Support Engineer",
-    "sameAs": [
-      "https://github.com/cgterrenal",
-      "https://linkedin.com/in/clarence-terrenal"
-    ]
-  }
-  </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Clarence Terrenal",
+      "url": "https://www.clarenceterrenal.com",
+      "jobTitle": "Technical Support Engineer",
+      "sameAs": [
+        "https://github.com/cgterrenal",
+        "https://linkedin.com/in/clarence-terrenal"
+      ]
+    }
+    </script>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <span class="fw-bold">Clarence Terrenal</span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <header class="hero text-center text-white position-relative bg-primary bg-gradient">
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <img src="assets/images/profile.jpg" class="rounded-circle profile-img shadow-lg border border-4 border-light" alt="Clarence Terrenal - Profile Picture">
-          <h1 class="mt-4 display-4 fw-bold">Clarence Terrenal</h1>
-          <p class="lead mb-4">Technical Support Engineer | Linux & Cloud Enthusiast | Avid iNEWS Specialist</p>
-          <div class="d-flex justify-content-center gap-3">
-            <a href="about.html" class="btn btn-light text-primary fw-semibold">Learn More</a>
-            <a href="contact.html" class="btn btn-outline-light">Contact Me</a>
-          </div>
-          <div class="mt-4">
-            <a href="https://github.com/cgterrenal" target="_blank" class="me-3 text-white fs-4" aria-label="GitHub">
-              <i class="bi bi-github"></i>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: var(--secondary-bg);">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-name">Clarence Terrenal</span>
             </a>
-            <a href="https://linkedin.com/in/clarence-terrenal" target="_blank" class="me-3 text-white fs-4" aria-label="LinkedIn">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Features Section -->
-  <section class="container my-5">
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 bg-dark text-white border-0 shadow-sm">
-          <div class="card-body text-center py-4">
-            <div class="icon-wrapper mb-3">
-              <i class="bi bi-code-square" style="font-size: 40px; color: var(--cta-color);"></i>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <h3 class="h5">Technical Support</h3>
-            <p>Providing expert technical support for Avid iNEWS and Command systems.</p>
-            <a href="experience.html" class="btn btn-outline-light mt-2">Learn More</a>
-          </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 bg-dark text-white border-0 shadow-sm">
-          <div class="card-body text-center py-4">
-            <div class="icon-wrapper mb-3">
-              <i class="bi bi-hdd-network" style="font-size: 40px; color: var(--cta-color);"></i>
-            </div>
-            <h3 class="h5">Linux Systems</h3>
-            <p>Experienced in Linux system administration, troubleshooting, and performance optimization.</p>
-            <a href="projects.html" class="btn btn-outline-light mt-2">View Projects</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 bg-dark text-white border-0 shadow-sm">
-          <div class="card-body text-center py-4">
-            <div class="icon-wrapper mb-3">
-              <i class="bi bi-cloud" style="font-size: 40px; color: var(--cta-color);"></i>
-            </div>
-            <h3 class="h5">Cloud Technologies</h3>
-            <p>Proficient in AWS environments, cloud automation, and infrastructure as code.</p>
-            <a href="certifications.html" class="btn btn-outline-light mt-2">See Certifications</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Footer -->
-  <footer class="text-center py-3 bg-dark text-white small">
-    <p class="mb-0">© 2025 Clarence Terrenal. All rights reserved.</p>
-  </footer>
+    <header class="hero text-center text-white position-relative">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <img src="assets/images/profile.jpg" class="rounded-circle profile-img" alt="Clarence Terrenal - Profile Picture">
+                    <h1 class="mt-4 display-4 fw-bold">Clarence Terrenal</h1>
+                    <p class="lead mb-4">Technical Support Engineer | Linux & Cloud Enthusiast | Avid iNEWS Specialist</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="about.html" class="btn btn-cta">Learn More</a>
+                        <a href="contact.html" class="btn btn-outline-light">Contact Me</a>
+                    </div>
+                    <div class="mt-5 social-icons">
+                        <a href="https://www.linkedin.com/in/cgterrenal/" target="_blank" class="me-3 text-white" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <section class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-white border-0">
+                    <div class="card-body text-center py-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-code-square" style="font-size: 40px; color: var(--cta-color);"></i>
+                        </div>
+                        <h3>Technical Support</h3>
+                        <p>Providing expert technical support for Avid iNEWS and Command systems.</p>
+                        <a href="experience.html" class="btn btn-outline-light mt-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-white border-0">
+                    <div class="card-body text-center py-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-hdd-network" style="font-size: 40px; color: var(--cta-color);"></i>
+                        </div>
+                        <h3>Linux Systems</h3>
+                        <p>Experienced in Linux system administration, troubleshooting, and performance optimization.</p>
+                        <a href="projects.html" class="btn btn-outline-light mt-2">View Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 bg-dark text-white border-0">
+                    <div class="card-body text-center py-4">
+                        <div class="icon-wrapper mb-3">
+                            <i class="bi bi-cloud" style="font-size: 40px; color: var(--cta-color);"></i>
+                        </div>
+                        <h3>Cloud Technologies</h3>
+                        <p>Proficient in AWS environments, cloud automation, and infrastructure as code.</p>
+                        <a href="certifications.html" class="btn btn-outline-light mt-2">See Certifications</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 bg-dark text-white">
+        <p class="mb-0">© 2025 Clarence Terrenal. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
