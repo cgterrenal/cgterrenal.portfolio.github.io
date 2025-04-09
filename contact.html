@@ -18,9 +18,36 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
 
     <style>
-        /* Increase the size of the LinkedIn and email icons */
+        /* Ensure uniform icon size */
         .contact-icons i {
-            font-size: 2rem; /* Adjust this value to change the size */
+            font-size: 2rem;
+        }
+
+        /* Contact section style to match about.html */
+        .contact-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color); /* Adjust this to match your primary theme color */
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: var(--text-color); /* Text color similar to about.html */
+        }
+
+        .contact-icons a {
+            color: var(--secondary-text-color);
+            text-decoration: none;
+        }
+
+        .contact-icons a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adjust margins and padding for better spacing */
+        .contact-section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
         }
     </style>
 </head>
@@ -47,7 +74,7 @@
     </nav>
 
     <!-- Contact Section -->
-    <section class="container py-5 --accent-color">
+    <section class="container contact-section">
         <div class="text-center mb-5">
             <h1 class="fw-bold">Contact Me</h1>
             <p class="lead">I'd love to hear from you — whether it's a question, opportunity, or just to connect.</p>
@@ -55,8 +82,8 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="mb-4 contact-icons">
-                    <p><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:cgterrenal@gmail.com" class="text-white">cgterrenal@gmail.com</a></p>
-                    <p><i class="bi bi-linkedin me-2"></i> <a href="https://www.linkedin.com/in/cgterrenal/" target="_blank" class="text-white">linkedin.com/in/cgterrenal</a></p>
+                    <p><i class="bi bi-envelope-fill me-2"></i> <a href="mailto:cgterrenal@gmail.com">cgterrenal@gmail.com</a></p>
+                    <p><i class="bi bi-linkedin me-2"></i> <a href="https://www.linkedin.com/in/cgterrenal/" target="_blank">linkedin.com/in/cgterrenal</a></p>
                 </div>
             </div>
         </div>
