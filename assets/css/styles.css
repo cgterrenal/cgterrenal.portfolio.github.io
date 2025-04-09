@@ -748,3 +748,9 @@ div:not(.text-center) > .section-title::after {
         justify-content: center;
     }
 }
+/* Add a minimal border to the Learning Journey section */
+.learning-journey {
+  border: 2px solid #ddd; /* Light grey border */
+  border-radius: 8px;      /* Optional: rounded corners for a softer look */
+  padding: 20px;           /* Optional: space around the content */
+}
